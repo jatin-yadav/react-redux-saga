@@ -1,11 +1,6 @@
 import { createStore } from "redux";
+import rootReducer from "./rootReducer";
 
-const testReducer = (state = { test: "test" }, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
-const store = createStore(testReducer);
+const store = createStore(rootReducer);
 
 export { store };

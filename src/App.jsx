@@ -4,11 +4,12 @@ import { Add_To_Cart } from "./redux/actions";
 
 function App() {
   const dipatch = useDispatch();
+  const product = { name: "Iphone", price: 1000 };
   return (
     <div>
       <button
         onClick={() => {
-          dipatch(Add_To_Cart);
+          dipatch(Add_To_Cart(product));
         }}
       >
         Add to cart
